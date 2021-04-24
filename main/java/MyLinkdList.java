@@ -56,4 +56,13 @@ public class MyLinkdList {
     }
 
 
+    public INode popLast(INode myNode) {
+        INode tempNode = myNode;
+        while(tempNode.getNext().equals(tail)){
+            tempNode=tempNode.getNext();
+        }
+        this.tail = tempNode.getNext();
+        tempNode.getNext().setNext(null);
+        return tempNode;
+    }
 }
