@@ -30,9 +30,26 @@ public class MyLinkedListTest {
         myLinkdList.append(myThirdNode);
         myLinkdList.printMyNodes();
 
-        boolean result = myLinkdList.head.equals(myThirdNode) &&
+        boolean result = myLinkdList.head.equals(myFirstNode) &&
                 myLinkdList.head.getNext().equals(mySecondNode) &&
-                myLinkdList.tail.equals(myFirstNode);
+                myLinkdList.tail.equals(myThirdNode);
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void given3NumbersWhenToLinkedListShouldInsertInBetween() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkdList myLinkdList = new MyLinkdList();
+        myLinkdList.add(myFirstNode);
+        myLinkdList.append(myThirdNode);
+        myLinkdList.insert(myFirstNode,mySecondNode);
+        myLinkdList.printMyNodes();
+
+        boolean result = myLinkdList.head.equals(myFirstNode) &&
+                myLinkdList.head.getNext().equals(mySecondNode) &&
+                myLinkdList.tail.equals(myThirdNode);
         Assertions.assertTrue(result);
     }
 }
