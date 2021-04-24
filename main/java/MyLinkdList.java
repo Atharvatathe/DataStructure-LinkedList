@@ -79,4 +79,17 @@ public class MyLinkdList {
 
         return tempNode;
     }
+
+    public void addAfter(INode myNode) {
+        INode tempNode = this.head;
+        while(tempNode !=null && tempNode.getNext() != null) {
+            if (tempNode.getKey().equals(30)) {
+                myNode.setNext(tempNode.getNext());
+                tempNode.setNext(myNode);
+                break;
+            } else
+                tempNode = tempNode.getNext();
+        }
+    }
+
 }
