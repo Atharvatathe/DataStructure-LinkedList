@@ -23,7 +23,7 @@ public class MyNode<k> implements INode<k>{
     }
 
     public void setNext(INode next) {
-        this.next =(MyNode<k>) next;
+        this.next = next;
     }
 
 
