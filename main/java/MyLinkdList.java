@@ -65,4 +65,18 @@ public class MyLinkdList {
         tempNode.getNext().setNext(null);
         return tempNode;
     }
+
+    public INode searchNode(INode myNode) {
+        INode tempNode = this.head;
+        while(tempNode !=null && tempNode.getNext() != null){
+            if(tempNode.getKey().equals(myNode.getKey())){
+                System.out.println("The Found value: "+tempNode.getKey());
+                break;
+            }
+            else
+                tempNode = tempNode.getNext();
+        }
+
+        return tempNode;
+    }
 }

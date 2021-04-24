@@ -90,5 +90,20 @@ public class MyLinkedListTest {
         Assertions.assertTrue(result);
     }
 
+    @Test
+    public void given3NumbersWhenToLinkedListShouldSearchNumber() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkdList myLinkdList = new MyLinkdList();
+        myLinkdList.append(myFirstNode);
+        myLinkdList.append(mySecondNode);
+        myLinkdList.append(myThirdNode);
+        INode foundNode = myLinkdList.searchNode(mySecondNode);
+
+        boolean result = foundNode.equals(mySecondNode);
+        Assertions.assertTrue(result);
+    }
+
 
 }
